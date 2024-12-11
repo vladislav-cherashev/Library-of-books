@@ -1,0 +1,26 @@
+{
+  "name": "library-of-books",
+  "version": "1.0.0",
+  "description": "library",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup -c --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vladislav-cherashev/Library-of-books.git"
+  },
+  "author": "cherashev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vladislav-cherashev/Library-of-books/issues"
+  },
+  "homepage": "https://github.com/vladislav-cherashev/Library-of-books#readme",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "rollup": "^4.28.1",
+    "rollup-plugin-import-css": "^3.5.7"
+  }
+}
