@@ -1,15 +1,27 @@
 import { MainView } from './views/main/main.js';
 
 /**
- * Точка входа в программу
+ * @class Точка входа в программу
  */
 class App {
+
     /**
-     * Текущая вью
-     * @type {null}
+     * @property {Object} - Текущая вью
      */
     currentView = null;
 
+    /**
+     * @namespace
+     * @property {object} appState - Состояние приложения
+     * @property {array} appState.favorites - Избранное
+     */
+    appState = {
+        favorites: []
+    };
+
+    /**
+     * @property {Array.<Object>} routes - Маршруты
+     */
     routes = [
         { path: '', view: MainView }
     ];
@@ -24,8 +36,7 @@ class App {
             this.currentView.destroy();
         }
         const view = this.routes.find( ( s ) => s.path === location.hash ).view;
-        console.log(view)
-        this.currentView = new view();
+        this.currentView = new view( this.appState );
         this.currentView.render();
     }
 }

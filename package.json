@@ -22,5 +22,8 @@
     "@rollup/plugin-node-resolve": "^15.3.0",
     "rollup": "^4.28.1",
     "rollup-plugin-import-css": "^3.5.7"
+  },
+  "dependencies": {
+    "on-change": "^5.0.1"
   }
 }
