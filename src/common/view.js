@@ -8,10 +8,7 @@ export class AbstractView {
     }
 
     render() {
-        const main = document.createElement( 'div' );
-        main.innerHTML = `TEST`;
-        this.app.innerHTML = '';
-        this.app.appendChild( main );
+        return;
     }
 
     destroy() {
